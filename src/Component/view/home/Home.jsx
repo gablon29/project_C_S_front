@@ -1,7 +1,9 @@
+import { Outlet } from "react-router-dom";
+
 const Home = () => {
     return (
         <>
-            {/* se renderizara el componente de tablas */}
+            <Outlet/>
         </>
     )
 }
