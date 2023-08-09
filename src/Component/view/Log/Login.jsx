@@ -1,19 +1,18 @@
-// import { useState } from "react";
 import { useForm } from "../../../hook/useForm";
 import { Form } from 'react-bootstrap';
 import { Button } from "react-bootstrap";
 
 const Login = () => {
-    // const [ access, setAcces ] = useState(false)
     const { name, password, onInputChange } = useForm({
         name: '',
         password: '',
       })
+      
       const input = (e) => {
         e.preventDefault()
-        // se ejecuta la funcion para verificar que la contraseña y el usuario
-      // son correctos
       }
+
+
     return (
     <>
     <svg width="100px" height="100px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
