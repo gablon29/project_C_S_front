@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "name": "Antoni",
+    "last_name": "Garcia",
+    "email": "antonio@gmail.com",
+    "amount": 20000,
+    "predicas": 4,
+    "status": "active",
+    "dni": "25262258",
+    "fecha_inicio": "23-04-2021"
+  },
+  {
+    "id": "2",
+    "name": "Hector",
+    "last_name": "Leandro",
+    "email": "hector@gmail.com",
+    "amount": 20500,
+    "predicas": 11,
+    "status": "active",
+    "dni": "25262258",
+    "fecha_inicio": "23-08-2021"
+  },
+  {
+    "id": "3",
+    "name": "Ruben",
+    "last_name": "Marcos",
+    "email": "Ruben@gmail.com",
+    "amount": 201890,
+    "predicas": 18,
+    "status": "active",
+    "dni": "25262258",
+    "fecha_inicio": "23-01-2021"
+  }
+]
