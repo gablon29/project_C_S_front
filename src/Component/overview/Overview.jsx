@@ -16,7 +16,16 @@ const Overview = () => {
     <main>
       <Title>Dashboard</Title>
       <Text>tabla de detalles de ingresos</Text>
-      <TabGroup className="mt-6"></TabGroup>
+      <TabGroup className="mt-6">
+        <TabList>
+          <Tab>Overview</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <Grid></Grid>
+          </TabPanel>
+        </TabPanels>
+      </TabGroup>
     </main>
   );
 };
