@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Card,
   Grid,
@@ -10,6 +9,8 @@ import {
   TabPanel,
   TabPanels,
 } from "@tremor/react";
+import KpiCard from "../kpiCard/KpiCard";
+import date from "../../../data/data.json";
 
 const Overview = () => {
   return (
@@ -24,15 +25,17 @@ const Overview = () => {
         <TabPanels>
           <TabPanel>
             <Grid numItemsMd={2} numItemsLg={3} className="gap-6 mt-6">
-              <Card>
-                <div className="h-28" />
-              </Card>
-              <Card>
-                <div className="h-28" />
-              </Card>
-              <Card>
-                <div className="h-28" />
-              </Card>
+              {date.map(({ id, metric, target, progress, deltaType }) => (
+                <>
+                  <KpiCard
+                    key={id}
+                    metric={metric}
+                    target={target}
+                    progress={progress}
+                    deltaType={deltaType}
+                  />
+                </>
+              ))}
             </Grid>
             <div className="mt-6">
               <Card>
