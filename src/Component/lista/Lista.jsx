@@ -37,12 +37,11 @@ export default function Lista() {
       <Table className="mt-6">
         <TableHead>
           <TableRow>
-            <TableHeaderCell>Id</TableHeaderCell>
             <TableHeaderCell>Name</TableHeaderCell>
-            <TableHeaderCell>Last Name</TableHeaderCell>
-            <TableHeaderCell>Status</TableHeaderCell>
-            <TableHeaderCell>Predicas</TableHeaderCell>
+            <TableHeaderCell>Predica</TableHeaderCell>
+            <TableHeaderCell>Fecha</TableHeaderCell>
             <TableHeaderCell>Amount</TableHeaderCell>
+            <TableHeaderCell>Status</TableHeaderCell>
             <TableHeaderCell>Link</TableHeaderCell>
           </TableRow>
         </TableHead>
@@ -50,16 +49,17 @@ export default function Lista() {
         <TableBody>
           {state.map((item) => (
             <TableRow key={item.id}>
-              <TableCell>{item.id}</TableCell>
               <TableCell>{item.name}</TableCell>
-              <TableCell>{item.last_name}</TableCell>
+              <TableCell style={{ fontFamily: "cursive", fontWeight: "" }}>
+                {item.predica}
+              </TableCell>
+              <TableCell>{item.fechaDeCulto}</TableCell>
+              <TableCell>{item.amount}</TableCell>
               <TableCell>
                 <Badge color={colors[item.status]} size="xs">
                   {item.status}
                 </Badge>
               </TableCell>
-              <TableCell className="font-bold">{item.predicas}</TableCell>
-              <TableCell className="content-center">{item.amount}</TableCell>
               <TableCell>
                 <Button size="xs" variant="secondary" color="gray">
                   See details
