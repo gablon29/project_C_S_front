@@ -5,14 +5,13 @@
     "last_name": "Garcia",
     "email": "antonio@gmail.com",
     "amount": 20000,
-    "predicas": 4,
+    "predica": "Dios como guia",
+    "fechaDeCulto": "13-02-2023",
     "target": "125,000",
     "metric": "45,000",
     "progress": "13.2%",
     "deltaTypes": "moderateIncrease",
-    "status": "active",
-    "dni": "25262258",
-    "fecha_inicio": "23-04-2021"
+    "status": "active"
   },
   {
     "id": "2",
@@ -20,14 +19,13 @@
     "last_name": "Leandro",
     "email": "hector@gmail.com",
     "amount": 20500,
-    "predicas": 11,
+    "predica": "Amor verdadero",
+    "fechaDeCulto": "17-02-2023",
     "target": "125,000",
     "metric": "50,000",
     "progress": "25.2%",
     "deltaTypes": "moderateIncrease",
-    "status": "active",
-    "dni": "25262258",
-    "fecha_inicio": "23-08-2021"
+    "status": "active"
   },
   {
     "id": "3",
@@ -35,13 +33,12 @@
     "last_name": "Marcos",
     "email": "Ruben@gmail.com",
     "amount": 201890,
-    "predicas": 18,
+    "predica": "La vida de los fieles",
+    "fechaDeCulto": "20-02-2023",
     "target": "125,000",
     "metric": "15,000",
     "progress": "1.2%",
     "deltaTypes": "moderateIncrease",
-    "status": "active",
-    "dni": "25262258",
-    "fecha_inicio": "23-01-2021"
+    "status": "active"
   }
 ]

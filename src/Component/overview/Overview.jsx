@@ -22,9 +22,9 @@ const Overview = () => {
           <Tab>Overview</Tab>
           <Tab>Details</Tab>
         </TabList>
-        <TabPanels>
+        <TabPanels style={{ padding: "10px" }}>
           <TabPanel>
-            <Grid numItemsMd={2} numItemsLg={3} className="gap-6 mt-6">
+            <Grid numItemsMd={2} numItemsLg={3} className="gap-3 mt-6">
               {date.map(({ id, metric, target, progress, deltaType }) => (
                 <KpiCard
                   key={id}
