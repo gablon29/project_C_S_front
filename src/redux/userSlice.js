@@ -18,5 +18,5 @@ export const userSlice = createSlice({
   },
 });
 
-export const { getUser } = userSlice.actions;
+export const { getUser, add_New_Table } = userSlice.actions;
 export default userSlice.reducer;

@@ -14,6 +14,7 @@ import {
 } from "@tremor/react";
 import data from "../../../data/data.json";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const colors = {
   innactive: "rose",
