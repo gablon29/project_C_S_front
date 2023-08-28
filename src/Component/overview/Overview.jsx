@@ -14,15 +14,38 @@ import {
 const Overview = () => {
   return (
     <main>
-      <Title>Dashboard</Title>
+      <Title style={{ color: "black", fontWeight: "bold" }}>Dashboard</Title>
       <Text>tabla de detalles de ingresos</Text>
       <TabGroup className="mt-6">
         <TabList>
           <Tab>Overview</Tab>
+          <Tab>Details</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
-            <Grid></Grid>
+            <Grid numItemsMd={2} numItemsLg={3} className="gap-6 mt-6">
+              <Card>
+                <div className="h-28" />
+              </Card>
+              <Card>
+                <div className="h-28" />
+              </Card>
+              <Card>
+                <div className="h-28" />
+              </Card>
+            </Grid>
+            <div className="mt-6">
+              <Card>
+                <div className="h-80" />
+              </Card>
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="mt-6">
+              <Card>
+                <div className="h-96" />
+              </Card>
+            </div>
           </TabPanel>
         </TabPanels>
       </TabGroup>
