@@ -11,10 +11,9 @@ import {
 const KpiCard = ({ id, metric, target, progress, deltaType }) => {
   const trunctate = (metric, target) => {
     let valor = (parseInt(metric) * 100) / parseInt(target);
-    return `${valor}%`;
+    return valor;
   };
   const valorTruncate = trunctate(metric, target);
-  console.log(valorTruncate);
 
   return (
     <Card key={id}>
@@ -27,7 +26,7 @@ const KpiCard = ({ id, metric, target, progress, deltaType }) => {
       </Flex>
       <Flex className="mt-4">
         <Text className="truncate">
-          {valorTruncate}({metric})
+          {valorTruncate}% ({metric})
         </Text>
         <Text>${target}</Text>
       </Flex>
