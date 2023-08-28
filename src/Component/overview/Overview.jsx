@@ -26,15 +26,13 @@ const Overview = () => {
           <TabPanel>
             <Grid numItemsMd={2} numItemsLg={3} className="gap-6 mt-6">
               {date.map(({ id, metric, target, progress, deltaType }) => (
-                <>
-                  <KpiCard
-                    key={id}
-                    metric={metric}
-                    target={target}
-                    progress={progress}
-                    deltaType={deltaType}
-                  />
-                </>
+                <KpiCard
+                  key={id}
+                  metric={metric}
+                  target={target}
+                  progress={progress}
+                  deltaType={deltaType}
+                />
               ))}
             </Grid>
             <div className="mt-6">
