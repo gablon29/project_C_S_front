@@ -13,7 +13,7 @@ const KpiCard = ({ id, metric, target, progress, deltaType }) => {
     let valor = (parseInt(metric) * 100) / parseInt(target);
     return valor;
   };
-  const valorTruncate = trunctate(metric, target);
+  const valorTruncate = trunctate(metric, target); //texto para probar la consola
 
   return (
     <Card key={id}>
