@@ -13,8 +13,8 @@ import {
   Button,
 } from "@tremor/react";
 import data from "../../../data/data.json";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 
 const colors = {
   innactive: "rose",
@@ -33,7 +33,7 @@ export default function Lista() {
         <Title>Purchases</Title>
         <Badge color="gray">{state.length}</Badge>
       </Flex>
-      <Text className="mt-2">Overview of this month's purchases</Text>
+      <Text className="mt-2">Overview of this months purchases</Text>
 
       <Table className="mt-6">
         <TableHead>
@@ -51,7 +51,7 @@ export default function Lista() {
           {state.map((item) => (
             <TableRow key={item.id}>
               <TableCell>{item.name}</TableCell>
-              <TableCell style={{ fontFamily: "cursive", fontWeight: "" }}>
+              <TableCell style={{ fontFamily: "cursive", fontWeight: "bold" }}>
                 {item.predica}
               </TableCell>
               <TableCell>{item.fechaDeCulto}</TableCell>
@@ -62,9 +62,11 @@ export default function Lista() {
                 </Badge>
               </TableCell>
               <TableCell>
-                <Button size="xs" variant="secondary" color="gray">
-                  See details
-                </Button>
+                <NavLink to={`detail/${item.id}`}>
+                  <Button size="xs" variant="secondary" color="gray">
+                    See details
+                  </Button>
+                </NavLink>
               </TableCell>
             </TableRow>
           ))}
