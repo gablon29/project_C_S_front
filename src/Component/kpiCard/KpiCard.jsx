@@ -6,6 +6,7 @@ import {
   ProgressBar,
   Text,
 } from "@tremor/react";
+import PropTypes from "prop-types";
 
 // eslint-disable-next-line react/prop-types
 const KpiCard = ({ id, metric, target, progress, deltaType }) => {
@@ -13,7 +14,7 @@ const KpiCard = ({ id, metric, target, progress, deltaType }) => {
     let valor = (parseInt(metric) * 100) / parseInt(target);
     return valor;
   };
-  const valorTruncate = trunctate(metric, target); //texto para probar la consola
+  const valorTruncate = trunctate(metric, target);
 
   return (
     <Card key={id}>
@@ -33,6 +34,14 @@ const KpiCard = ({ id, metric, target, progress, deltaType }) => {
       <ProgressBar value={valorTruncate} className="mt-2"></ProgressBar>
     </Card>
   );
+};
+
+KpiCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  metric: PropTypes.string.isRequired,
+  target: PropTypes.string.isRequired,
+  progress: PropTypes.string.isRequired,
+  deltaType: PropTypes.string.isRequired,
 };
 
 export default KpiCard;
