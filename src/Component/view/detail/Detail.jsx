@@ -1,9 +1,9 @@
+import DetailComp from "../../detailComp/DetailComp";
+import { useParams } from "react-router-dom";
+
 const Detail = () => {
-  return (
-    <>
-      <h1></h1>
-    </>
-  );
+  const { id } = useParams();
+  return <DetailComp id={id} />;
 };
 
 export default Detail;

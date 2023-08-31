@@ -1,19 +1,25 @@
-import { Card, Title, Badge } from "@tremor/react";
+import { Card, Title } from "@tremor/react";
 import PropTypes from "prop-types";
+import data from "../../../data/data.json";
 
-const DetailComp = ({ name, last_name }) => {
+const DetailComp = ({ id }) => {
+  const pastor = data.filter((pastor) => pastor.id === id);
   return (
     <Card>
       <Title>Detalles del Pastor</Title>
-      <Card>
-        <Title>Nombre: {name}</Title>
-        <Title>Nombre: {last_name}</Title>
-      </Card>
+
+      {pastor.map((pastor) => (
+        <Card key={pastor.id}>
+          <Title>Nombre: {pastor.name}</Title>
+          <Title>Apellido: {pastor.last_name}</Title>
+          <Title>Email: {pastor.email}</Title>
+          <Title>Status: {pastor.status}</Title>
+        </Card>
+      ))}
     </Card>
   );
 };
 DetailComp.propTypes = {
-  name: PropTypes.string.isRequired,
-  last_name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 export default DetailComp;
